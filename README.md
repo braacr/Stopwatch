@@ -1,2 +1,2 @@
 # Stopwatch
- Simple Stopwatch (HTML,CSS,JS)
+ Simple Stopwatch (HTML, CSS, JS)
