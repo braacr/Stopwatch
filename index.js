@@ -1,4 +1,6 @@
 const display = document.getElementById("display");
+const lapsContainer = document.getElementById("laps");
+
 let timer = null;
 let startTime = 0;
 let elapsedTime = 0;
@@ -27,6 +29,7 @@ function reset() {
     elapsedTime = 0;
     isRunning = false;
     display.textContent = "00:00:00:00";
+    lapsContainer.innerHTML = "";
 };
 
 function update() {
@@ -45,3 +48,28 @@ function update() {
 
     display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
 };
+
+function recordLap() {
+    if(isRunning) {
+        const lapItem = document.createElement("li");
+        lapItem.textContent = display.textContent;
+        lapsContainer.appendChild(lapItem);
+    }
+}
+
+document.addEventListener("keydown", (event) => {
+    switch(event.key) {
+        case "s":
+            start();
+            break;
+        case "t":
+            stop();
+            break;
+        case "r":
+            reset();
+            break;
+        case "l":
+            recordLap();
+            break;
+    }
+})

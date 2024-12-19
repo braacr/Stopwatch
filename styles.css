@@ -2,13 +2,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(0, 0%, 90%);
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: hsl(210, 36%, 96%);
+    color: hsl(210, 22%, 25%);
 }
 
-#myH1 {
-    font-size: 4rem;
-    font-family: "Arial", sans-serif;
-    color: hsl(0, 0%, 25%);
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: hsl(210, 22%, 15%);
 }
 
 #container {
@@ -16,53 +21,80 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 30px;
-    border: 5px solid;
-    border-radius: 50px;
+    border-radius: 10px;
     background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #display {
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: monospace;
     font-weight: bold;
-    color: hsl(0, 0%, 30%);
-    text-shadow: 2px 2px 2px hsl(0, 0%, 0%, 0.75);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    color: hsl(210, 22%, 25%);
 }
 
 #controls button {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     padding: 10px 20px;
     margin: 5px;
-    min-width: 125px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     color: white;
-    transition: background-color 0.5s ease;
+    transition: transform 0.2s, background-color 0.3s ease;
+}
+
+#controls button:hover {
+    transform: scale(1.1);
 }
 
 #startBtn {
-    background-color: hsl(115, 100%, 40%);
+    background-color: hsl(145, 63%, 49%);
 }
 
 #startBtn:hover {
-    background-color: hsl(115, 100%, 30%);
+    background-color: hsl(145, 63%, 40%);
 }
 
 #stopBtn {
-    background-color: hsl(10, 90%, 50%);
+    background-color: hsl(0, 78%, 62%);
 }
 
 #stopBtn:hover {
-    background-color: hsl(10, 90%, 40%);
+    background-color: hsl(0, 78%, 52%);
 }
 
 #resetBtn {
-    background-color: hsl(205, 90%, 60%);
+    background-color: hsl(217, 71%, 53%);
 }
 
 #resetBtn:hover {
-    background-color: hsl(205, 90%, 50%);
+    background-color: hsl(217, 71%, 43%);
+}
+
+#lapBtn {
+    background-color: hsl(48, 89%, 60%);
+}
+
+#lapBtn:hover {
+    background-color: hsl(48, 89%, 50%);
+}
+
+#laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#laps li {
+    font-size: 1rem;
+    font-family: monospace;
+    background-color: hsl(210, 36%, 90%);
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
